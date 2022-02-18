@@ -1,0 +1,10 @@
+<h1>Lists of movies</h1>
+<ul class="list-group">
+  <% @lists.each do |list| %>
+    <li class="list-group-item">
+    <%= list.name %> |
+    <%= link_to 'Details', "/lists/#{list.id}" %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Add new list', 'lists/new', class: "btn btn-primary mt-2" %>
